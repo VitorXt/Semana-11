@@ -1,9 +1,10 @@
 import React from 'react';
 
+import Header from './Header';
 
 function App() {
   return (
-    <h1>Vai Caraio</h1>
+    <Header />
   );
 }
 
