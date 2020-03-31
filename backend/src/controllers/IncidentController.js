@@ -38,6 +38,20 @@ module.exports = {
 
         return response.json({ id });
     },
+    
+    async edit(request, response){
+        const { title, description, value } = request.body;
+        const ong_id = request.headers.authorization; 
+
+        const [id] = await connection('incidents/').insert({
+            title,
+            description,
+            value,     
+           
+        });
+
+        return response.json({ id });
+    },
 
     async delete( request, response){
         const { id } = request.params;
